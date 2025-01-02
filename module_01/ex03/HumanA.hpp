@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/02 16:29:02 by acabarba          #+#    #+#             */
-/*   Updated: 2025/01/02 16:49:23 by acabarba         ###   ########.fr       */
+/*   Created: 2025/01/02 16:43:38 by acabarba          #+#    #+#             */
+/*   Updated: 2025/01/02 16:50:40 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
 
-Weapon::Weapon()
-{}
-
-Weapon::~Weapon()
-{}
-
-void		setType(std::string type)
+class HumanA
 {
-	this->type = type;
-}
+	private:
+		std::string		name;
+		Weapon			weapon;	
 
-std::string	getType()
-{
-	return this->type;
+	public:
+		HumanA(std::string name);
+		~HumanA();
 }

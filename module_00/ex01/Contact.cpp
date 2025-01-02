@@ -6,19 +6,17 @@
 /*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 13:48:40 by acabarba          #+#    #+#             */
-/*   Updated: 2024/12/31 14:16:03 by acabarba         ###   ########.fr       */
+/*   Updated: 2025/01/02 16:42:58 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
 Contact::Contact()
-{
-}
+{}
 
 Contact::~Contact()
-{
-}
+{}
 
 std::string		Contact::get_first_name()
 {

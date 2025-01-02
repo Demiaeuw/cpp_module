@@ -6,7 +6,7 @@
 /*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 13:48:54 by acabarba          #+#    #+#             */
-/*   Updated: 2024/12/31 18:18:00 by acabarba         ###   ########.fr       */
+/*   Updated: 2025/01/02 16:43:06 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ PhoneBook::PhoneBook()
 }
 
 PhoneBook::~PhoneBook()
-{
-}
+{}
 
 void	PhoneBook::add()
 {
