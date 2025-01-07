@@ -6,7 +6,7 @@
 /*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 14:15:40 by acabarba          #+#    #+#             */
-/*   Updated: 2025/01/07 14:24:24 by acabarba         ###   ########.fr       */
+/*   Updated: 2025/01/07 14:47:03 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,7 +117,7 @@ Fixed Fixed::operator/(const Fixed &other) const
 
 // Surcharges des opérateurs d’incrémentation/décrémentation
 Fixed &Fixed::operator++()
-{ // Pré-incrémentation
+{
     ++this->_fixedPointValue;
     return *this;
 }
