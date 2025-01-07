@@ -1,12 +1,13 @@
 # Nom de l'exécutable
-NAME = 
+NAME = utilclass
 
 # Compilateur et options
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 # Fichiers sources
-SRC = 
+SRC = 	main.cpp\
+		Fixed.cpp
 
 # Dossier pour les fichiers objets
 OBJ_DIR = obj

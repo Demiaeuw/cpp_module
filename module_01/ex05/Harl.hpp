@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/02 16:29:02 by acabarba          #+#    #+#             */
-/*   Updated: 2025/01/03 18:16:10 by acabarba         ###   ########.fr       */
+/*   Created: 2025/01/04 16:32:33 by acabarba          #+#    #+#             */
+/*   Updated: 2025/01/04 16:48:13 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#ifndef HARL_HPP
+# define HARL_HPP
 
-Weapon::Weapon()
-{}
+# include <iostream>
+# include <fstream>
 
-Weapon::Weapon(std::string str)
+class Harl
 {
-	this->type = str;
-}
+	private:
+		void	debug();
+		void	info();
+		void	warning();
+		void	error();
+	public:
+		Harl();
+		~Harl();
+		void	complain(std::string level);
+};
 
-Weapon::~Weapon()
-{}
 
-void		Weapon::setType(std::string type)
-{
-	this->type = type;
-}
 
-const std::string&	Weapon::getType() const
-{
-	const std::string& stringREF = this->type;
-	return stringREF;
-}
+#endif

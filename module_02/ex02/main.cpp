@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/02 16:29:02 by acabarba          #+#    #+#             */
-/*   Updated: 2025/01/03 18:16:10 by acabarba         ###   ########.fr       */
+/*   Created: 2025/01/07 14:18:21 by acabarba          #+#    #+#             */
+/*   Updated: 2025/01/07 14:23:41 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#include "Fixed.hpp"
+#include <iostream>
 
-Weapon::Weapon()
-{}
-
-Weapon::Weapon(std::string str)
+int main()
 {
-	this->type = str;
-}
+    Fixed a;
+    Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 
-Weapon::~Weapon()
-{}
+    std::cout << a << std::endl;
+    std::cout << ++a << std::endl;
+    std::cout << a << std::endl;
+    std::cout << a++ << std::endl;
+    std::cout << a << std::endl;
 
-void		Weapon::setType(std::string type)
-{
-	this->type = type;
-}
+    std::cout << b << std::endl;
 
-const std::string&	Weapon::getType() const
-{
-	const std::string& stringREF = this->type;
-	return stringREF;
+    std::cout << Fixed::max( a, b ) << std::endl;
+
+    return 0;
 }

@@ -1,12 +1,15 @@
 # Nom de l'exécutable
-NAME = 
+NAME = violence
 
 # Compilateur et options
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 # Fichiers sources
-SRC = 
+SRC = 	main.cpp\
+		HumanA.cpp\
+		HumanB.cpp\
+		Weapon.cpp
 
 # Dossier pour les fichiers objets
 OBJ_DIR = obj
@@ -24,7 +27,7 @@ $(NAME): $(OBJ)
 # Règle pour compiler les fichiers objets
 $(OBJ_DIR)/%.o: %.cpp
 	@mkdir -p $(OBJ_DIR)
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 # Règle pour nettoyer les fichiers objets
 clean:

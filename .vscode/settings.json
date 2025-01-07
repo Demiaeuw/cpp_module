@@ -53,6 +53,13 @@
 		"typeinfo": "cpp",
 		"ctime": "cpp",
 		"iomanip": "cpp",
-		"sstream": "cpp"
+		"sstream": "cpp",
+		"fstream": "cpp",
+		"cstring": "cpp",
+		"chrono": "cpp",
+		"ratio": "cpp",
+		"semaphore": "cpp",
+		"stop_token": "cpp",
+		"thread": "cpp"
 	}
 }

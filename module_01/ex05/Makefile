@@ -1,5 +1,5 @@
 # Nom de l'exécutable
-NAME = 
+NAME = harl
 
 # Compilateur et options
 CXX = c++
