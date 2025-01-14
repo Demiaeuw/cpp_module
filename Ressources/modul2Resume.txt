@@ -6,10 +6,10 @@ Exercice 00 : Mon premier canon
 Objectif : Découvrir la forme canonique de Coplien
 
 Imagine une voiture sur une chaîne de production :
-- Constructeur par défaut : C’est comme une voiture sortie de l’usine avec les paramètres par défaut.
-- Constructeur de recopie : C’est une copie exacte d’une voiture existante.
-- Opérateur d’affectation : Ajuste une voiture pour qu’elle soit identique à une autre.
-- Destructeur : Lorsque la voiture est mise à la casse, ses pièces sont correctement démontées.
+- Constructeur par défaut 	: C’est comme une voiture sortie de l’usine avec les paramètres par défaut.
+- Constructeur de recopie 	: C’est une copie exacte d’une voiture existante.
+- Opérateur d’affectation 	: Ajuste une voiture pour qu’elle soit identique à une autre.
+- Destructeur 				: Lorsque la voiture est mise à la casse, ses pièces sont correctement démontées.
 
 Concept clé : La forme canonique de Coplien est un manuel pour construire, copier et démonter un objet en C++.
 
