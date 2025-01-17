@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/07 15:44:38 by acabarba          #+#    #+#             */
-/*   Updated: 2025/01/17 22:36:50 by acabarba         ###   ########.fr       */
+/*   Created: 2025/01/17 03:34:44 by acabarba          #+#    #+#             */
+/*   Updated: 2025/01/17 22:57:01 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-int	main() {
-	// Création d'une instance de ScavTrap
-	ScavTrap scav("Dimitri");
+#include "ClapTrap.hpp"
 
-	// Test des attaques
-	scav.attack("Jhon");
-	scav.takeDamage(10);
-	scav.beRepaired(2);
+class ScavTrap : public ClapTrap {
+	private:
+		bool Guard;
 
-	// Test du mode gardien
-	scav.guardGate();
+	protected:
 
-	return 0;
-}
+	public:
+		ScavTrap();
+		ScavTrap(const std::string& name);
+		ScavTrap(const ScavTrap& copy);
+		~ScavTrap();
+		
+		void attack(const std::string& target);
+		void guardGate();
+};
+
+#endif

@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/07 15:44:38 by acabarba          #+#    #+#             */
-/*   Updated: 2025/01/17 22:36:50 by acabarba         ###   ########.fr       */
+/*   Created: 2025/01/17 22:46:40 by acabarba          #+#    #+#             */
+/*   Updated: 2025/01/17 23:07:35 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-int	main() {
-	// Création d'une instance de ScavTrap
-	ScavTrap scav("Dimitri");
+#include "ClapTrap.hpp"
 
-	// Test des attaques
-	scav.attack("Jhon");
-	scav.takeDamage(10);
-	scav.beRepaired(2);
+class FragTrap : public ClapTrap {
+	private:
+		bool	Guard;
+	protected:
 
-	// Test du mode gardien
-	scav.guardGate();
+	public:
+		FragTrap();
+		FragTrap(const std::string& name);
+		FragTrap(const FragTrap& copy);
+		~FragTrap();
 
-	return 0;
-}
+		void highFivesGuys(void);
+};
+
+#endif
+

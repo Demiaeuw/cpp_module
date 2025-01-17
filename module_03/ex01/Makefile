@@ -1,12 +1,14 @@
 # Nom de l'exécutable
-NAME = 
+NAME = scav
 
 # Compilateur et options
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 # Fichiers sources
-SRC = 
+SRC =	ClapTrap.cpp\
+		ScavTrap.cpp\
+		main.cpp
 
 # Dossier pour les fichiers objets
 OBJ_DIR = obj
