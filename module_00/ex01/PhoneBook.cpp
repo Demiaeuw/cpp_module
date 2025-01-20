@@ -6,7 +6,7 @@
 /*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 13:48:54 by acabarba          #+#    #+#             */
-/*   Updated: 2025/01/02 16:43:06 by acabarba         ###   ########.fr       */
+/*   Updated: 2025/01/20 16:32:15 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void	PhoneBook::search()
 	
 	for (int i = 0; i < 8; i++)
 	{
-		std::cout	<< "|" << std::setw(10) << std::right << i + 1
+		std::cout	<< "|" << std::setw(10) << std::right << i
 					<< "|" << std::setw(10) << std::right << truncate(this->repertory[i].get_first_name())
 					<< "|" << std::setw(10) << std::right << truncate(this->repertory[i].get_last_name())
 					<< "|" << std::setw(10) << std::right << truncate(this->repertory[i].get_nickname()) 
@@ -97,9 +97,9 @@ void	PhoneBook::print_index()
 	std::cout << "	For seeing details enter index: " << std::endl;
 	
 	std::getline(std::cin, index);
-	lindex = atoi(index.c_str() + 1);
+	lindex = atoi(index.c_str());
 	
-	if (lindex < 1 || lindex > 8)
+	if (lindex < 0 || lindex > 7)
 	{
 		std::cout << "	invalid index." << std::endl;
 		return;
