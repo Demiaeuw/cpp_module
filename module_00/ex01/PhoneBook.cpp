@@ -6,7 +6,7 @@
 /*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 13:48:54 by acabarba          #+#    #+#             */
-/*   Updated: 2025/01/20 16:32:15 by acabarba         ###   ########.fr       */
+/*   Updated: 2025/01/21 18:32:16 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,11 +97,17 @@ void	PhoneBook::print_index()
 	std::cout << "	For seeing details enter index: " << std::endl;
 	
 	std::getline(std::cin, index);
+	
+	if (index != "0" || index != "1" || index != "2" || index != "3" || index != "4" || index != "5" || index != "6" || index != "7") {
+		std::cout << "	Invalid index." << std::endl;
+		return;
+	}
+	
 	lindex = atoi(index.c_str());
 	
 	if (lindex < 0 || lindex > 7)
 	{
-		std::cout << "	invalid index." << std::endl;
+		std::cout << "	Invalid index." << std::endl;
 		return;
 	}
 	if (!this->repertory[lindex].get_first_name().size())

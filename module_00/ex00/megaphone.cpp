@@ -6,12 +6,11 @@
 /*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 11:29:37 by acabarba          #+#    #+#             */
-/*   Updated: 2024/12/30 17:45:58 by acabarba         ###   ########.fr       */
+/*   Updated: 2025/01/21 19:02:33 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <cctype>
 
 int main(int ac, char **av)
 {
