@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/21 14:22:39 by acabarba          #+#    #+#             */
-/*   Updated: 2025/01/30 16:32:43 by acabarba         ###   ########.fr       */
+/*   Created: 2025/01/30 16:40:24 by acabarba          #+#    #+#             */
+/*   Updated: 2025/01/30 17:09:23 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-Dog::Dog() : Animal("Dog") {
-	std::cout << "Default Dog constructor called" << std::endl;
-}
+#include <iostream>
 
-Dog::Dog(const Dog& copy) : Animal(copy) {
-	std::cout << "Copy Dog constructor called for " << copy.getType() << std::endl;
-	*this = copy;
-}
+class Brain {
+   private:
+	std::string ideas[100];
+	
+   protected:
+	
+   public:
+		   //constructor / destructor
+	   Brain();
+	   Brain(const Brain& copy);
+	   ~Brain();
 
-Dog::~Dog() {
-	std::cout << "Destructor Dog called" << std::endl;
-}
+	   Brain& operator=(const Brain& other);
 
-void	Dog::makeSound() const {
-	std::cout << "Wouaf" << std::endl;
-}
+	   void	setIdeas(int index, std::string idea);
+	   std::string	getIdeas(int index) const;
+};
+
+#endif

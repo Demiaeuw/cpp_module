@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/21 14:22:39 by acabarba          #+#    #+#             */
-/*   Updated: 2025/01/30 16:32:43 by acabarba         ###   ########.fr       */
+/*   Created: 2025/01/30 16:20:47 by acabarba          #+#    #+#             */
+/*   Updated: 2025/01/30 16:25:45 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-Dog::Dog() : Animal("Dog") {
-	std::cout << "Default Dog constructor called" << std::endl;
-}
+# include "WrongAnimal.hpp"
 
-Dog::Dog(const Dog& copy) : Animal(copy) {
-	std::cout << "Copy Dog constructor called for " << copy.getType() << std::endl;
-	*this = copy;
-}
+class WrongCat : virtual public WrongAnimal {
+   private:
+	
 
-Dog::~Dog() {
-	std::cout << "Destructor Dog called" << std::endl;
-}
+   protected:
+	
 
-void	Dog::makeSound() const {
-	std::cout << "Wouaf" << std::endl;
-}
+   public:
+		   //constructor / destructor
+	   WrongCat();
+	   WrongCat(const WrongCat& copy);
+	   ~WrongCat();
+
+	   WrongCat&	operator = (const WrongCat& copy);
+};
+
+
+
+#endif

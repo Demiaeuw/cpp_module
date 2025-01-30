@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/21 14:22:39 by acabarba          #+#    #+#             */
-/*   Updated: 2025/01/30 16:32:43 by acabarba         ###   ########.fr       */
+/*   Created: 2025/01/21 13:51:36 by acabarba          #+#    #+#             */
+/*   Updated: 2025/01/30 16:42:36 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#ifndef CAT_HPP
+# define CAT_HPP
 
-Dog::Dog() : Animal("Dog") {
-	std::cout << "Default Dog constructor called" << std::endl;
-}
+# include "Animal.hpp"
+# include "Brain.hpp"
 
-Dog::Dog(const Dog& copy) : Animal(copy) {
-	std::cout << "Copy Dog constructor called for " << copy.getType() << std::endl;
-	*this = copy;
-}
+class Cat :  virtual public Animal {
+	private:
+		Brain*	brain;
+	protected:
 
-Dog::~Dog() {
-	std::cout << "Destructor Dog called" << std::endl;
-}
+	public:
+		Cat();
+		Cat(const Cat& copy);
+		~Cat();
 
-void	Dog::makeSound() const {
-	std::cout << "Wouaf" << std::endl;
-}
+		void	makeSound() const;
+};
+
+#endif

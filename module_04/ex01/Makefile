@@ -1,5 +1,5 @@
 # Nom de l'exécutable
-NAME = animal
+NAME = BrainAnimal
 
 # Compilateur et options
 CXX = c++
@@ -7,6 +7,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 # Fichiers sources
 SRC =	main.cpp\
+		Brain.cpp\
 		Animal.cpp\
 		Cat.cpp\
 		WrongAnimal.cpp\
