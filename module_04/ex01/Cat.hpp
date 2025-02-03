@@ -6,7 +6,7 @@
 /*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 13:51:36 by acabarba          #+#    #+#             */
-/*   Updated: 2025/01/30 16:42:36 by acabarba         ###   ########.fr       */
+/*   Updated: 2025/02/03 13:05:08 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class Cat :  virtual public Animal {
 		~Cat();
 
 		void	makeSound() const;
+		Brain*	getBrain() const;
 };
 
 #endif

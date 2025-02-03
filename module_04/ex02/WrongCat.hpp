@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/30 16:40:24 by acabarba          #+#    #+#             */
-/*   Updated: 2025/02/03 12:43:31 by acabarba         ###   ########.fr       */
+/*   Created: 2025/01/30 16:20:47 by acabarba          #+#    #+#             */
+/*   Updated: 2025/01/30 16:25:45 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-#include <iostream>
+# include "WrongAnimal.hpp"
 
-class Brain {
+class WrongCat : virtual public WrongAnimal {
    private:
-	std::string ideas[100];
 	
+
    protected:
 	
+
    public:
-	   Brain();
-	   Brain(const Brain& copy);
-	   ~Brain();
+		   //constructor / destructor
+	   WrongCat();
+	   WrongCat(const WrongCat& copy);
+	   ~WrongCat();
 
-	   Brain& operator=(const Brain& other);
-
-	   void	setIdeas(int index, std::string idea);
-	   std::string	getIdeas(int index) const;
+	   WrongCat&	operator = (const WrongCat& copy);
 };
+
+
 
 #endif

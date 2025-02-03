@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/30 16:40:24 by acabarba          #+#    #+#             */
-/*   Updated: 2025/02/03 12:43:31 by acabarba         ###   ########.fr       */
+/*   Created: 2025/01/21 13:51:36 by acabarba          #+#    #+#             */
+/*   Updated: 2025/02/03 13:15:31 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
-#include <iostream>
+# include "AAnimal.hpp"
+# include "Brain.hpp"
 
-class Brain {
-   private:
-	std::string ideas[100];
-	
-   protected:
-	
-   public:
-	   Brain();
-	   Brain(const Brain& copy);
-	   ~Brain();
+class Cat :  virtual public AAnimal {
+	private:
+		Brain*	brain;
+	protected:
 
-	   Brain& operator=(const Brain& other);
+	public:
+		Cat();
+		Cat(const Cat& copy);
+		~Cat();
 
-	   void	setIdeas(int index, std::string idea);
-	   std::string	getIdeas(int index) const;
+		void	makeSound() const;
+		Brain*	getBrain() const;
 };
 
 #endif

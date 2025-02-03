@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/30 16:40:24 by acabarba          #+#    #+#             */
-/*   Updated: 2025/02/03 12:43:31 by acabarba         ###   ########.fr       */
+/*   Created: 2025/01/21 14:25:07 by acabarba          #+#    #+#             */
+/*   Updated: 2025/02/03 13:15:56 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
 
-#include <iostream>
+# include "AAnimal.hpp"
+# include "Brain.hpp"
 
-class Brain {
-   private:
-	std::string ideas[100];
-	
-   protected:
-	
-   public:
-	   Brain();
-	   Brain(const Brain& copy);
-	   ~Brain();
+class Dog : virtual public AAnimal {
+	private:
+		Brain*	brain;
+	protected:
 
-	   Brain& operator=(const Brain& other);
+	public:
+		Dog();
+		Dog(const Dog& copy);
+		~Dog();
 
-	   void	setIdeas(int index, std::string idea);
-	   std::string	getIdeas(int index) const;
+		void	makeSound() const;
+		Brain*	getBrain() const;
 };
 
 #endif

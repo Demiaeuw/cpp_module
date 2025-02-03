@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/30 16:40:24 by acabarba          #+#    #+#             */
-/*   Updated: 2025/02/03 12:43:31 by acabarba         ###   ########.fr       */
+/*   Created: 2025/01/21 13:39:23 by acabarba          #+#    #+#             */
+/*   Updated: 2025/02/03 13:11:54 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
+#ifndef AANIMAL_HPP
+# define AANIMAL_HPP
 
-#include <iostream>
+# include <iostream>
 
-class Brain {
-   private:
-	std::string ideas[100];
+class AAnimal {
+	private:
 	
-   protected:
+	protected:
+		std::string	Type;
 	
-   public:
-	   Brain();
-	   Brain(const Brain& copy);
-	   ~Brain();
+	public:
+			//constructor / destructor
+		AAnimal();
+		AAnimal(const std::string type);
+		AAnimal(const AAnimal& copy);
+		virtual ~AAnimal();
 
-	   Brain& operator=(const Brain& other);
+			//operator surcharged
+		AAnimal& operator=(const AAnimal& other);
 
-	   void	setIdeas(int index, std::string idea);
-	   std::string	getIdeas(int index) const;
+			//fonction
+		std::string	getType() const;
+		virtual void	makeSound() const = 0;
 };
 
 #endif
