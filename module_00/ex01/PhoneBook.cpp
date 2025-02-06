@@ -6,7 +6,7 @@
 /*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 13:48:54 by acabarba          #+#    #+#             */
-/*   Updated: 2025/01/21 18:32:16 by acabarba         ###   ########.fr       */
+/*   Updated: 2025/02/06 12:45:36 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,10 +98,11 @@ void	PhoneBook::print_index()
 	
 	std::getline(std::cin, index);
 	
-	if (index != "0" || index != "1" || index != "2" || index != "3" || index != "4" || index != "5" || index != "6" || index != "7") {
-		std::cout << "	Invalid index." << std::endl;
+	if (index != "0" && index != "1" && index != "2" && index != "3" && index != "4" && index != "5" && index != "6" && index != "7") {
+		std::cout << "\tInvalid index." << std::endl;
 		return;
 	}
+
 	
 	lindex = atoi(index.c_str());
 	
