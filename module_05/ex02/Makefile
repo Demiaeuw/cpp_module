@@ -1,12 +1,17 @@
 # Nom de l'exécutable
-NAME = 
+NAME = form28C
 
 # Compilateur et options
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 # Fichiers sources
-SRC = 
+SRC =	main.cpp\
+		AForm.cpp\
+		Bureaucrat.cpp\
+		PresidentialPardonForm.cpp\
+		RobotomyRequestForm.cpp\
+		ShrubberyCreationForm.cpp
 
 # Dossier pour les fichiers objets
 OBJ_DIR = obj
