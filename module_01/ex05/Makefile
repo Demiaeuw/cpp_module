@@ -6,7 +6,8 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 # Fichiers sources
-SRC = 
+SRC =	Harl.cpp\
+		main.cpp
 
 # Dossier pour les fichiers objets
 OBJ_DIR = obj
