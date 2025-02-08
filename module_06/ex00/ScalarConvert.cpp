@@ -6,12 +6,11 @@
 /*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 20:04:24 by acabarba          #+#    #+#             */
-/*   Updated: 2025/02/07 21:25:36 by acabarba         ###   ########.fr       */
+/*   Updated: 2025/02/08 06:11:47 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConvert.hpp"
-#include <cstdlib>  // Pour strtol et strtod
 
 ScalarConvert::ScalarConvert() {}
 
