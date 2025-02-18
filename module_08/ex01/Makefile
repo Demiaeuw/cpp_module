@@ -1,12 +1,12 @@
 # Nom de l'exécutable
-NAME = testArray
+NAME = span
 
 # Compilateur et options
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 # Fichiers sources
-SRC =	main.cpp\
+SRC = 
 
 # Dossier pour les fichiers objets
 OBJ_DIR = obj

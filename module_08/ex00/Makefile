@@ -1,5 +1,5 @@
 # Nom de l'exécutable
-NAME = testArray
+NAME = ezFound
 
 # Compilateur et options
 CXX = c++
