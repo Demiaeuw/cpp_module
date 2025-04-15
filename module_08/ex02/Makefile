@@ -6,7 +6,7 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 # Fichiers sources
-SRC = 
+SRC =	main.cpp
 
 # Dossier pour les fichiers objets
 OBJ_DIR = obj
